@@ -1,0 +1,6 @@
+framework module Pods_trainSocialApp {
+  umbrella header "Pods-trainSocialApp-umbrella.h"
+
+  export *
+  module * { export * }
+}
