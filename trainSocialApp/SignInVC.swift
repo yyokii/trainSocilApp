@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import SwiftKeychainWrapper
 
 class SignInVC: UIViewController {
     @IBOutlet weak var emailField: UITextField!
@@ -17,6 +18,14 @@ class SignInVC: UIViewController {
         super.viewDidLoad()
         
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        
+        if let _ = KeychainWrapper.standard.string(forKey: KEY_UID) {
+            
+            performSegue(withIdentifier: "goToFeed", sender: nil)
+        }
+    }
 
     @IBAction func signinTapped(_ sender: UIButton) {
         
@@ -25,6 +34,10 @@ class SignInVC: UIViewController {
             FIRAuth.auth()?.signIn(withEmail: mail, password: pwd, completion: { (user, error) in
                 if error == nil {
                     print("EN: Email user authenticated with Firebase")
+                    
+                    if let user = user {
+                        self.completeSignIn(id: user.uid)
+                    }
                 } else {
                     
                     FIRAuth.auth()?.createUser(withEmail: mail, password: pwd, completion: { (user, error) in
@@ -32,6 +45,9 @@ class SignInVC: UIViewController {
                             print("EN: error creatUser \(error)")
                         } else {
                             print("EN: Successfully authenticated with Firebase")
+                            if let user = user {
+                                self.completeSignIn(id: user.uid)
+                            }
                         }
                     })
                 }
@@ -39,6 +55,14 @@ class SignInVC: UIViewController {
                 
             })
         }
+    }
+    
+    func completeSignIn (id: String) {
+        
+        KeychainWrapper.standard.set(id, forKey: KEY_UID)
+        print("EN: saved keychain")
+        performSegue(withIdentifier: "goToFeed", sender: nil)
+
     }
 
 

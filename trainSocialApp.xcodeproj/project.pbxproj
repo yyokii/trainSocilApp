@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		7214869875D5DF3D116E556C /* Pods_trainSocialApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61EA2179D982B45B3A7E7381 /* Pods_trainSocialApp.framework */; };
 		D33CA00C1EA22FAF00CC5D0D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D33CA00B1EA22FAF00CC5D0D /* GoogleService-Info.plist */; };
+		D33CA0131EA32FD700CC5D0D /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33CA0121EA32FD700CC5D0D /* File.swift */; };
+		D33CA0151EA336F400CC5D0D /* FeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33CA0141EA336F400CC5D0D /* FeedVC.swift */; };
 		D3F6E3D91EA22B1100AF92BF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F6E3D81EA22B1100AF92BF /* AppDelegate.swift */; };
 		D3F6E3DB1EA22B1100AF92BF /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F6E3DA1EA22B1100AF92BF /* SignInVC.swift */; };
 		D3F6E3DE1EA22B1100AF92BF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3F6E3DC1EA22B1100AF92BF /* Main.storyboard */; };
@@ -21,6 +23,8 @@
 		4FA9C429B96F49A8EBA8AC8D /* Pods-trainSocialApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-trainSocialApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-trainSocialApp/Pods-trainSocialApp.debug.xcconfig"; sourceTree = "<group>"; };
 		61EA2179D982B45B3A7E7381 /* Pods_trainSocialApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_trainSocialApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D33CA00B1EA22FAF00CC5D0D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		D33CA0121EA32FD700CC5D0D /* File.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
+		D33CA0141EA336F400CC5D0D /* FeedVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedVC.swift; sourceTree = "<group>"; };
 		D3F6E3D51EA22B1100AF92BF /* trainSocialApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = trainSocialApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3F6E3D81EA22B1100AF92BF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D3F6E3DA1EA22B1100AF92BF /* SignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
@@ -63,6 +67,7 @@
 			isa = PBXGroup;
 			children = (
 				D3F6E3DA1EA22B1100AF92BF /* SignInVC.swift */,
+				D33CA0141EA336F400CC5D0D /* FeedVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -79,6 +84,14 @@
 			children = (
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		D33CA0111EA32FBD00CC5D0D /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				D33CA0121EA32FD700CC5D0D /* File.swift */,
+			);
+			name = Util;
 			sourceTree = "<group>";
 		};
 		D3F6E3CC1EA22B1000AF92BF = {
@@ -102,6 +115,7 @@
 		D3F6E3D71EA22B1100AF92BF /* trainSocialApp */ = {
 			isa = PBXGroup;
 			children = (
+				D33CA0111EA32FBD00CC5D0D /* Util */,
 				D33CA0101EA2318400CC5D0D /* Model */,
 				D33CA00F1EA2318300CC5D0D /* View */,
 				D33CA00D1EA2317000CC5D0D /* Controller */,
@@ -239,7 +253,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D33CA0151EA336F400CC5D0D /* FeedVC.swift in Sources */,
 				D3F6E3DB1EA22B1100AF92BF /* SignInVC.swift in Sources */,
+				D33CA0131EA32FD700CC5D0D /* File.swift in Sources */,
 				D3F6E3D91EA22B1100AF92BF /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
