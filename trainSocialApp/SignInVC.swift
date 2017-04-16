@@ -7,17 +7,38 @@
 //
 
 import UIKit
+import Firebase
 
 class SignInVC: UIViewController {
+    @IBOutlet weak var emailField: UITextField!
+    @IBOutlet weak var pasField: UITextField!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    @IBAction func signinTapped(_ sender: UIButton) {
+        
+        if let mail = emailField.text, let pwd = pasField.text {
+            
+            FIRAuth.auth()?.signIn(withEmail: mail, password: pwd, completion: { (user, error) in
+                if error == nil {
+                    print("EN: Email user authenticated with Firebase")
+                } else {
+                    
+                    FIRAuth.auth()?.createUser(withEmail: mail, password: pwd, completion: { (user, error) in
+                        if error != nil {
+                            print("EN: error creatUser \(error)")
+                        } else {
+                            print("EN: Successfully authenticated with Firebase")
+                        }
+                    })
+                }
+                
+                
+            })
+        }
     }
 
 

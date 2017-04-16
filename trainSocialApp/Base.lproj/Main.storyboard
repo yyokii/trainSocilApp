@@ -20,11 +20,53 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="Er5-fk-C3h">
+                                <rect key="frame" x="76" y="274" width="250" height="130"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="email addres" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RqJ-Gl-RFQ">
+                                        <rect key="frame" x="0.0" y="0.0" width="250" height="33.5"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password(at least needs 6 words)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZRf-j4-kOp">
+                                        <rect key="frame" x="0.0" y="48.5" width="250" height="33"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cnz-bX-Po7">
+                                        <rect key="frame" x="0.0" y="96.5" width="250" height="33.5"/>
+                                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Sign In">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="signinTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VJP-Mv-fCA"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="130" id="04Z-Bj-pr5"/>
+                                    <constraint firstAttribute="width" constant="250" id="WtZ-HT-fnX"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Er5-fk-C3h" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="5.5" id="J8b-1s-CFW"/>
+                            <constraint firstItem="Er5-fk-C3h" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="13.5" id="taI-gB-URS"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="emailField" destination="RqJ-Gl-RFQ" id="7hW-DY-sce"/>
+                        <outlet property="pasField" destination="ZRf-j4-kOp" id="Nxi-aN-sfe"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="121.88905547226388"/>
         </scene>
     </scenes>
 </document>
