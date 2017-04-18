@@ -13,6 +13,7 @@
 		D33CA0151EA336F400CC5D0D /* FeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33CA0141EA336F400CC5D0D /* FeedVC.swift */; };
 		D33CA0171EA4D91B00CC5D0D /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33CA0161EA4D91B00CC5D0D /* PostCell.swift */; };
 		D3E298411EA4E07100BA242F /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E298401EA4E07100BA242F /* DataService.swift */; };
+		D3E298431EA638EC00BA242F /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E298421EA638EC00BA242F /* Post.swift */; };
 		D3F6E3D91EA22B1100AF92BF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F6E3D81EA22B1100AF92BF /* AppDelegate.swift */; };
 		D3F6E3DB1EA22B1100AF92BF /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F6E3DA1EA22B1100AF92BF /* SignInVC.swift */; };
 		D3F6E3DE1EA22B1100AF92BF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3F6E3DC1EA22B1100AF92BF /* Main.storyboard */; };
@@ -29,6 +30,7 @@
 		D33CA0141EA336F400CC5D0D /* FeedVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedVC.swift; sourceTree = "<group>"; };
 		D33CA0161EA4D91B00CC5D0D /* PostCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
 		D3E298401EA4E07100BA242F /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		D3E298421EA638EC00BA242F /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		D3F6E3D51EA22B1100AF92BF /* trainSocialApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = trainSocialApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3F6E3D81EA22B1100AF92BF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D3F6E3DA1EA22B1100AF92BF /* SignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
@@ -87,6 +89,7 @@
 		D33CA0101EA2318400CC5D0D /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				D3E298421EA638EC00BA242F /* Post.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -272,6 +275,7 @@
 				D33CA0131EA32FD700CC5D0D /* File.swift in Sources */,
 				D3E298411EA4E07100BA242F /* DataService.swift in Sources */,
 				D3F6E3D91EA22B1100AF92BF /* AppDelegate.swift in Sources */,
+				D3E298431EA638EC00BA242F /* Post.swift in Sources */,
 				D33CA0171EA4D91B00CC5D0D /* PostCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
